@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tttravesuras - Catálogo</title>
+    
+    <!-- 1. Importar las tipografías que elegiste -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;1,400&family=Kalnia:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        /* 2. Aplicar la estética de tu diseño y branding */
+        body {
+            /* Usamos el color de texto Negro Inconsciente */
+            color: #121212; 
+            /* Usamos la tipografía base Ritualista */
+            font-family: 'Ibarra Real Nova', serif;
+            background-color: #FFFFFF; /* Fondo blanco limpio como tu imagen */
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        /* Contenedor principal del catálogo */
+        .catalogo-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            /* Una grilla de una columna, con espacio entre productos */
+            grid-template-columns: 1fr;
+            gap: 60px; /* Espacio entre cada producto */
+        }
+
+        /* Cada item de producto */
+        .producto-item {
+            display: flex;
+            flex-direction: column; /* Apilado en móvil */
+            gap: 20px;
+            align-items: center;
+        }
+
+        /* La imagen del producto */
+        .producto-imagen {
+            flex-shrink: 0;
+            width: 100%; /* Ocupa todo el ancho en móvil */
+            max-width: 300px; /* Límite de tamaño */
+        }
+
+        .producto-imagen img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1; /* Imagen cuadrada */
+            object-fit: cover;
+            background-color: #E6E0FF; /* Color Lienzo Onírico de fondo */
+        }
+
+        /* La información del producto */
+        .producto-info {
+            text-align: center; /* Centrado en móvil */
+        }
+
+        /* Título de la pieza (CÓMPLICE) */
+        .producto-info h2 {
+            /* Usamos la tipografía Vanguardista/Elegante */
+            font-family: 'Kalnia', serif;
+            font-size: 2.5rem; /* 40px */
+            font-weight: 500;
+            text-transform: uppercase;
+            margin: 0 0 5px 0;
+            color: #121212;
+        }
+
+        /* Descripción técnica (Anillo de plata...) */
+        .producto-info .descripcion {
+            font-family: 'Ibarra Real Nova', serif;
+            font-style: italic;
+            font-size: 1.125rem; /* 18px */
+            color: #555;
+            margin: 0 0 15px 0;
+        }
+
+        /* Texto catalizador (Ahora, la travesura...) */
+        .producto-info .catalizador {
+            font-family: 'Ibarra Real Nova', serif;
+            font-size: 1.25rem; /* 20px */
+            color: #333;
+            margin: 0;
+        }
+
+        /* 3. Adaptación para pantallas grandes (Desktop) */
+        @media (min-width: 768px) {
+            body {
+                padding: 80px 40px;
+            }
+
+            .producto-item {
+                /* El layout de tu imagen: imagen a la izq, texto a la der */
+                flex-direction: row; 
+                text-align: left; /* Alineado a la izquierda en desktop */
+                gap: 40px; /* Más espacio */
+                align-items: flex-start; /* Alinear al inicio */
+            }
+
+            .producto-imagen {
+                width: 300px; /* Tamaño fijo en desktop */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="catalogo-container">
+
+        <!-- Producto 1: CÓMPLICE -->
+        <div class="producto-item">
+            <div class="producto-imagen">
+                <!-- Reemplaza este 'src' con la URL de tu foto -->
+                <img src="https://placehold.co/400x400/121212/E6E0FF?text=C%C3%93MPLICE" alt="Anillo Cómplice">
+            </div>
+            <div class="producto-info">
+                <h2>CÓMPLICE</h2>
+                <p class="descripcion">(Anillo de plata 950)</p>
+                <p class="catalizador">Ahora, la travesura es tuya. ¿Qué ves?</p>
+            </div>
+        </div>
+
+        <!-- Producto 2: Flow -->
+        <div class="producto-item">
+            <div class="producto-imagen">
+                <!-- Reemplaza este 'src' con la URL de tu foto -->
+                <img src="https://placehold.co/400x400/121212/E6E0FF?text=Flow" alt="Anillo Flow">
+            </div>
+            <div class="producto-info">
+                <h2>Flow</h2>
+                <p class="descripcion">(Anillo de bronce, fluido)</p>
+                <p class="catalizador">Ahora, la travesura es tuya. ¿Qué ves?</p>
+            </div>
+        </div>
+
+        <!-- Producto 3: Lux -->
+        <div class="producto-item">
+            <div class="producto-imagen">
+                <!-- Reemplaza este 'src' con la URL de tu foto -->
+                <img src="https://placehold.co/400x400/121212/E6E0FF?text=Lux" alt="Colgante Lux">
+            </div>
+            <div class="producto-info">
+                <h2>Lux</h2>
+                <p class="descripcion">(Colgante de bronce)</p>
+                <p class="catalizador">Ahora, la travesura es tuya. ¿Qué ves?</p>
+            </div>
+        </div>
+
+        <!-- Producto 4: tttravesuras -->
+        <div class="producto-item">
+            <div class="producto-imagen">
+                <!-- Reemplaza este 'src' con la URL de tu foto -->
+                <img src="https://placehold.co/400x400/121212/E6E0FF?text=tttravesuras" alt="Colgante tttravesuras">
+            </div>
+            <div class="producto-info">
+                <h2>tttravesuras</h2>
+                <p class="descripcion">(Colgante de plata 950)</p>
+                <p class="catalizador">Ahora, la travesura es tuya. ¿Qué ves?</p>
+            </div>
+        </div>
+
+    </div> <!-- fin de .catalogo-container -->
+
+</body>
+</html>
